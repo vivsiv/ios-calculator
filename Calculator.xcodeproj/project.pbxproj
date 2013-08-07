@@ -18,12 +18,13 @@
 		E2634C5517B2C8D2002393D0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2634C5417B2C8D2002393D0 /* Default-568h@2x.png */; };
 		E2634C5817B2C8D2002393D0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2634C5617B2C8D2002393D0 /* MainStoryboard_iPhone.storyboard */; };
 		E2634C5B17B2C8D2002393D0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2634C5917B2C8D2002393D0 /* MainStoryboard_iPad.storyboard */; };
-		E2634C5E17B2C8D2002393D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2634C5D17B2C8D2002393D0 /* ViewController.m */; };
+		E2634C5E17B2C8D2002393D0 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2634C5D17B2C8D2002393D0 /* CalculatorViewController.m */; };
 		E2634C6617B2C8D3002393D0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2634C6517B2C8D3002393D0 /* SenTestingKit.framework */; };
 		E2634C6717B2C8D3002393D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2634C3E17B2C8D2002393D0 /* UIKit.framework */; };
 		E2634C6817B2C8D3002393D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2634C4017B2C8D2002393D0 /* Foundation.framework */; };
 		E2634C7017B2C8D3002393D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2634C6E17B2C8D3002393D0 /* InfoPlist.strings */; };
 		E2634C7317B2C8D3002393D0 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2634C7217B2C8D3002393D0 /* CalculatorTests.m */; };
+		E2634C7E17B2C99C002393D0 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = E2634C7D17B2C99C002393D0 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +53,16 @@
 		E2634C5417B2C8D2002393D0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E2634C5717B2C8D2002393D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E2634C5A17B2C8D2002393D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E2634C5C17B2C8D2002393D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E2634C5D17B2C8D2002393D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2634C5C17B2C8D2002393D0 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		E2634C5D17B2C8D2002393D0 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		E2634C6417B2C8D3002393D0 /* CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2634C6517B2C8D3002393D0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E2634C6D17B2C8D3002393D0 /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		E2634C6F17B2C8D3002393D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2634C7117B2C8D3002393D0 /* CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorTests.h; sourceTree = "<group>"; };
 		E2634C7217B2C8D3002393D0 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		E2634C7C17B2C99C002393D0 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		E2634C7D17B2C99C002393D0 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +122,17 @@
 		E2634C4417B2C8D2002393D0 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E2634C8117B2CBEC002393D0 /* Views */,
+				E2634C8017B2CBE3002393D0 /* Models */,
+				E2634C7F17B2CBD5002393D0 /* Controllers */,
 				E2634C4D17B2C8D2002393D0 /* AppDelegate.h */,
 				E2634C4E17B2C8D2002393D0 /* AppDelegate.m */,
 				E2634C5617B2C8D2002393D0 /* MainStoryboard_iPhone.storyboard */,
 				E2634C5917B2C8D2002393D0 /* MainStoryboard_iPad.storyboard */,
-				E2634C5C17B2C8D2002393D0 /* ViewController.h */,
-				E2634C5D17B2C8D2002393D0 /* ViewController.m */,
+				E2634C5C17B2C8D2002393D0 /* CalculatorViewController.h */,
+				E2634C5D17B2C8D2002393D0 /* CalculatorViewController.m */,
+				E2634C7C17B2C99C002393D0 /* CalculatorBrain.h */,
+				E2634C7D17B2C99C002393D0 /* CalculatorBrain.m */,
 				E2634C4517B2C8D2002393D0 /* Supporting Files */,
 			);
 			path = Calculator;
@@ -161,6 +169,27 @@
 				E2634C6E17B2C8D3002393D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2634C7F17B2CBD5002393D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E2634C8017B2CBE3002393D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E2634C8117B2CBEC002393D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +305,8 @@
 			files = (
 				E2634C4B17B2C8D2002393D0 /* main.m in Sources */,
 				E2634C4F17B2C8D2002393D0 /* AppDelegate.m in Sources */,
-				E2634C5E17B2C8D2002393D0 /* ViewController.m in Sources */,
+				E2634C5E17B2C8D2002393D0 /* CalculatorViewController.m in Sources */,
+				E2634C7E17B2C99C002393D0 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
