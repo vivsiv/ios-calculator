@@ -10,9 +10,18 @@
 
 @implementation CalculatorBrain
 
+@synthesize operand;
+
+/*
+Implementing getter and setter manually
+- (double)operand {
+    return operand;
+}
+
 - (void)setOperand:(double)anOperand {
     operand = anOperand;
 }
+*/
 
 - (void)performWaitingOperation {
     if ([@"+" isEqual:waitingOperation]){

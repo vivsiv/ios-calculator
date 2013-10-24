@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface CalculatorBrain : NSObject {
+@private
     double operand;
     NSString *waitingOperation;
     double waitingOperand;
 }
 
-- (void)setOperand:(double)anOperand;
+@property double operand;
+/*
+ Declaring setter manually
+ - (void)setOperand:(double)anOperand;
+*/
 - (double)performOperation:(NSString *)operation;
 
 @end

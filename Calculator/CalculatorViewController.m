@@ -29,12 +29,14 @@
 
 - (IBAction)operationPressed:(UIButton *)sender{
     if ([[[sender titleLabel] text] isEqual:@"clear"]){
-        [[self brain] setOperand:0];
+        //[[self brain] setOperand:0];
+        [self brain].operand = 0;
         [display setText:[NSString stringWithFormat:@"%i", 0]];
     }
     else {
         if (userIsInTheMiddleOfTypingANumber) {
-            [[self brain] setOperand:[[display text] doubleValue]];
+            //[[self brain] setOperand:[[display text] doubleValue]];
+            [self brain].operand = [[display text] doubleValue];
             userIsInTheMiddleOfTypingANumber = NO;
         }
         NSString *operation = [[sender titleLabel] text];
