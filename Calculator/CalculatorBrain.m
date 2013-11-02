@@ -12,6 +12,11 @@
 
 @synthesize operand;
 
+- (void)clearBrain{
+    waitingOperand = 0;
+    operand = 0;
+}
+
 - (void)performWaitingOperation {
     if ([@"+" isEqual:waitingOperation]){
         operand += waitingOperand;

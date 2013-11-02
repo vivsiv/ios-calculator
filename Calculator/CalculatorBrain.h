@@ -17,5 +17,6 @@
 
 @property double operand;
 - (double)performOperation:(NSString *)operation;
+- (void)clearBrain;
 
 @end

@@ -25,6 +25,7 @@
         [display setText:digit];
         userIsInTheMiddleOfTypingANumber = YES;
     }
+    [allDisplay setText:[[allDisplay text] stringByAppendingString:digit]];
 }
 
 -(IBAction)decimalPressed:(UIButton *)sender{
@@ -43,5 +44,13 @@
     NSString *operation = [[sender titleLabel] text];
     double result = [[self brain] performOperation:operation];
     [display setText:[NSString stringWithFormat:@"%g", result]];
+    [allDisplay setText:[[allDisplay text] stringByAppendingString:operation]];
+}
+
+- (IBAction)clearPressed:(UIButton *)sender{
+    [brain clearBrain];
+    [display setText:@"0"];
+    [allDisplay setText:@""];
+    
 }
 @end
