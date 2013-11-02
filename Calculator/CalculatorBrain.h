@@ -16,10 +16,6 @@
 }
 
 @property double operand;
-/*
- Declaring setter manually
- - (void)setOperand:(double)anOperand;
-*/
 - (double)performOperation:(NSString *)operation;
 
 @end

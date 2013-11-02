@@ -27,21 +27,21 @@
     }
 }
 
+-(IBAction)decimalPressed:(UIButton *)sender{
+    if (!decimalPressed && userIsInTheMiddleOfTypingANumber){
+        [display setText:[[display text] stringByAppendingString:@"."]];
+        decimalPressed = YES;
+    }
+}
+
 - (IBAction)operationPressed:(UIButton *)sender{
-    if ([[[sender titleLabel] text] isEqual:@"clear"]){
-        //[[self brain] setOperand:0];
-        [self brain].operand = 0;
-        [display setText:[NSString stringWithFormat:@"%i", 0]];
+    if (userIsInTheMiddleOfTypingANumber) {
+        [self brain].operand = [[display text] doubleValue];
+        userIsInTheMiddleOfTypingANumber = NO;
+        decimalPressed = NO;
     }
-    else {
-        if (userIsInTheMiddleOfTypingANumber) {
-            //[[self brain] setOperand:[[display text] doubleValue]];
-            [self brain].operand = [[display text] doubleValue];
-            userIsInTheMiddleOfTypingANumber = NO;
-        }
-        NSString *operation = [[sender titleLabel] text];
-        double result = [[self brain] performOperation:operation];
-        [display setText:[NSString stringWithFormat:@"%g", result]];
-    }
+    NSString *operation = [[sender titleLabel] text];
+    double result = [[self brain] performOperation:operation];
+    [display setText:[NSString stringWithFormat:@"%g", result]];
 }
 @end

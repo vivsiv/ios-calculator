@@ -12,17 +12,6 @@
 
 @synthesize operand;
 
-/*
-Implementing getter and setter manually
-- (double)operand {
-    return operand;
-}
-
-- (void)setOperand:(double)anOperand {
-    operand = anOperand;
-}
-*/
-
 - (void)performWaitingOperation {
     if ([@"+" isEqual:waitingOperation]){
         operand += waitingOperand;
@@ -42,8 +31,25 @@ Implementing getter and setter manually
 }
 
 - (double)performOperation:(NSString *)operation {
+    if([operation isEqual:@"clear"]){
+        operand = 0;
+        waitingOperand = 0;
+    }
     if([operation isEqual:@"sqrt"]){
         operand = sqrt(operand);
+        waitingOperand = 0;
+    }
+    else if ([operation isEqual:@"sin"]){
+        operand = sin(operand);
+        waitingOperand = 0;
+    }
+    else if ([operation isEqual:@"cos"]){
+        operand = cos(operand);
+        waitingOperand = 0;
+    }
+    else if ([operation isEqual:@"pi"]){
+        operand = M_PI * operand;
+        waitingOperand = 0;
     }
     else {
         [self performWaitingOperation];
